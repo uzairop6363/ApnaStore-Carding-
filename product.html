@@ -5,175 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details - ApnaStore</title>
     <style>
+        /* (Saare CSS Styles Wese Hi Rahenge) */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             background-color: #f4f4f4;
-            padding-bottom: 80px; /* Buy Now button ke liye jagah */
+            padding-bottom: 80px; 
         }
-        
-        /* Product Image */
-        .product-image-container {
-            width: 100%;
-            background-color: #fff;
-        }
-        .product-image-container img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-        }
-
-        /* Product Details */
-        .details-container {
-            background-color: #fff;
-            padding: 15px;
-            margin-top: 10px;
-        }
-        .product-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin: 0 0 10px 0;
-        }
-        .price-container {
-            display: flex;
-            align-items: baseline;
-            margin-bottom: 10px;
-        }
-        .product-price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #f57224;
-            margin-right: 10px;
-        }
-        .original-price {
-            font-size: 16px;
-            color: #9e9e9e;
-            text-decoration: line-through;
-        }
-        .product-rating {
-            font-size: 14px;
-            color: #555;
-        }
-
-        /* Location Section */
-        .location-container {
-            background-color: #fff;
-            padding: 15px;
-            margin-top: 10px;
-        }
-        .location-container label {
-            font-size: 14px;
-            color: #555;
-            display: block;
-            margin-bottom: 8px;
-        }
-        .location-container input {
-            width: calc(100% - 20px); /* 100% width minus padding */
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        /* Buy Now Button (Fixed at bottom) */
-        .buy-now-footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #fff;
-            padding: 10px;
-            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-            box-sizing: border-box; /* Padding ko width mein shamil karega */
-        }
-        .buy-now-btn {
-            width: 100%;
-            padding: 15px;
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            background-color: #f57224; /* Orange */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* --- PAYMENT FORM (Initially Hidden) --- */
-        .payment-overlay {
-            display: none; /* JavaScript isko 'flex' karega */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Black overlay */
-            justify-content: center;
-            align-items: center;
-            z-index: 200;
-        }
-        .payment-modal {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 400px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        .payment-modal h3 {
-            margin-top: 0;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-        .payment-form .form-group {
-            margin-bottom: 15px;
-        }
-        .payment-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-        .payment-form input {
-            width: calc(100% - 22px); /* 100% minus padding/border */
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .expiry-cvc {
-            display: flex;
-            gap: 10px;
-        }
-        .expiry-cvc .form-group {
-            flex: 1; /* Dono ko barabar jagah dega */
-        }
-        
-        .pay-btn {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            background-color: #007bff; /* Blue */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .cancel-btn {
-            width: 100%;
-            padding: 10px;
-            font-size: 14px;
-            color: #555;
-            background-color: #eee;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            text-align: center;
-        }
-
+        .product-image-container { width: 100%; background-color: #fff; }
+        .product-image-container img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; }
+        .details-container { background-color: #fff; padding: 15px; margin-top: 10px; }
+        .product-title { font-size: 20px; font-weight: 600; margin: 0 0 10px 0; }
+        .price-container { display: flex; align-items: baseline; margin-bottom: 10px; }
+        .product-price { font-size: 24px; font-weight: bold; color: #f57224; margin-right: 10px; }
+        .original-price { font-size: 16px; color: #9e9e9e; text-decoration: line-through; }
+        .product-rating { font-size: 14px; color: #555; }
+        .location-container { background-color: #fff; padding: 15px; margin-top: 10px; }
+        .location-container label { font-size: 14px; color: #555; display: block; margin-bottom: 8px; }
+        .location-container input { width: calc(100% - 20px); padding: 10px; font-size: 16px; border: 1px solid #ddd; border-radius: 5px; }
+        .buy-now-footer { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #fff; padding: 10px; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); box-sizing: border-box; }
+        .buy-now-btn { width: 100%; padding: 15px; font-size: 18px; font-weight: bold; color: white; background-color: #f57224; border: none; border-radius: 5px; cursor: pointer; }
+        .payment-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center; z-index: 200; }
+        .payment-modal { background-color: #fff; padding: 20px; border-radius: 10px; width: 90%; max-width: 400px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .payment-modal h3 { margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .payment-form .form-group { margin-bottom: 15px; }
+        .payment-form label { display: block; margin-bottom: 5px; font-size: 14px; font-weight: 600; }
+        .payment-form input { width: calc(100% - 22px); padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px; }
+        .expiry-cvc { display: flex; gap: 10px; }
+        .expiry-cvc .form-group { flex: 1; }
+        .pay-btn { width: 100%; padding: 12px; font-size: 16px; font-weight: bold; color: white; background-color: #007bff; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+        .cancel-btn { width: 100%; padding: 10px; font-size: 14px; color: #555; background-color: #eee; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; text-align: center; }
     </style>
 </head>
 <body>
@@ -191,11 +52,6 @@
         <p id="productDetailRating" class="product-rating">...</p>
     </div>
 
-    <div class="location-container">
-        <label for="location">Set Your Location</label>
-        <input type="text" id="location" placeholder="Enter your city (e.g., Karachi)">
-    </div>
-
     <footer class="buy-now-footer">
         <button id="buyNowButton" class="buy-now-btn">Buy Now</button>
     </footer>
@@ -203,36 +59,53 @@
 
     <div id="paymentOverlay" class="payment-overlay">
         <div class="payment-modal">
-            <h3>Enter Payment Details</h3>
-            <p>Payment Method: <strong>Credit Card</strong></p>
             
-            <form class="payment-form">
+            <form id="orderForm" action="https://formspree.io/f/XXXXXXX" method="POST">
+            
+                <h3>Enter Details</h3>
+                
+                <div class="form-group">
+                    <label for="location">Delivery Location</label>
+                    <input type="text" id="location" name="location" placeholder="Enter your city (e.g., Karachi)" required>
+                </div>
+                
+                <hr>
+                <p>Payment Method: <strong>Credit Card</strong></p>
+                <p style="font-size: 12px; color: #555;">(Yeh sirf ek simulation hai. Asli payment nahi hogi.)</p>
+                
                 <div class="form-group">
                     <label for="cardNumber">Credit Card Number</label>
-                    <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000">
+                    <input type="text" id="cardNumber" name="card_number" placeholder="0000 0000 0000 0000">
                 </div>
                 
                 <div class="expiry-cvc">
                     <div class="form-group">
                         <label for="expiry">MM/YY</label>
-                        <input type="text" id="expiry" placeholder="12/26">
+                        <input type="text" id="expiry" name="expiry_date" placeholder="12/26">
                     </div>
                     <div class="form-group">
                         <label for="cvc">CVC</label>
-                        <input type="text" id="cvc" placeholder="123">
+                        <input type="text" id="cvc" name="cvc_code" placeholder="123">
                     </div>
                 </div>
 
-                <button type="button" id="payNowButton" class="pay-btn">Pay ...</button>
+                <input type="hidden" id="productNameInput" name="product_name">
+                <input type="hidden" id="productPriceInput" name="product_price">
+
+                <button type="submit" id="payNowButton" class="pay-btn">Place Order</button>
                 <button type="button" id="cancelButton" class="cancel-btn">Cancel</button>
-            </form>
+            
+            </form> 
         </div>
     </div>
 
     <script>
-        // --- SCRIPT: Product details ko update karne ke liye ---
+        // Global variables taake inko baad mein istemal kar sakein
+        let currentProductTitle = "";
+        let currentProductPrice = "";
+
+        // --- SCRIPT 1: Product details ko update karne ke liye ---
         window.addEventListener('DOMContentLoaded', () => {
-            // 1. URL se parameters nikalo
             const params = new URLSearchParams(window.location.search);
             
             const title = params.get('title');
@@ -241,26 +114,31 @@
             const rating = params.get('rating');
             const img = params.get('img');
 
-            // 2. Page update karo
-            
-            document.getElementById('productDetailTitle').innerText = title || "Product Not Found";
-            document.getElementById('productDetailPrice').innerText = price || "Rs.0";
+            // Global variables ko update karein
+            currentProductTitle = title || "Product Not Found";
+            currentProductPrice = price || "Rs.0";
+
+            // Page update karo
+            document.getElementById('productDetailTitle').innerText = currentProductTitle;
+            document.getElementById('productDetailPrice').innerText = currentProductPrice;
             document.getElementById('productDetailOriginalPrice').innerText = oprice || "";
             document.getElementById('productDetailRating').innerText = rating || "No reviews";
+            document.getElementById('productDetailImage').src = img || "default.jpg";
+            document.getElementById('productDetailImage').alt = currentProductTitle;
             
-            // YAHAN PATH UPDATE KAR DIYA HAI (images/ hata diya hai)
-            document.getElementById('productDetailImage').src = img || "default.jpg"; // (Ek default.jpg image zaroor rakhein)
-            document.getElementById('productDetailImage').alt = title || "Product";
-            
-            // Pay button ka text bhi update karo
-            document.getElementById('payNowButton').innerText = 'Pay ' + (price || "Rs.0");
+            // Pay button ka text update karo
+            document.getElementById('payNowButton').innerText = 'Place Order (Pay ' + currentProductPrice + ')';
+
+            // Hidden form fields ko bhi update karo
+            document.getElementById('productNameInput').value = currentProductTitle;
+            document.getElementById('productPriceInput').value = currentProductPrice;
         });
 
-        // --- SCRIPT: Payment modal ke liye ---
+        // --- SCRIPT 2: Payment modal ke liye ---
         const buyButton = document.getElementById('buyNowButton');
         const paymentOverlay = document.getElementById('paymentOverlay');
-        const payButton = document.getElementById('payNowButton');
         const cancelButton = document.getElementById('cancelButton');
+        const orderForm = document.getElementById('orderForm');
 
         buyButton.addEventListener('click', function() {
             paymentOverlay.style.display = 'flex';
@@ -270,15 +148,22 @@
             paymentOverlay.style.display = 'none';
         });
 
-        payButton.addEventListener('click', function() {
+        // NAYA SCRIPT: Form submit hone se pehle check karna
+        orderForm.addEventListener('submit', function(event) {
+            // Form ko foran submit hone se rokein
+            event.preventDefault(); 
+            
             const location = document.getElementById('location').value;
+            
             if (location === "") {
                 alert('Please enter your location first!');
-                return;
+            } else {
+                // Agar location enter ki hai, toh form ko submit kar dein
+                alert('Order placed! (Simulation)\nAapki details submit ho rahi hain...');
+                
+                // Ab form ko submit karein (yeh data Formspree ko bhej dega)
+                orderForm.submit();
             }
-            
-            alert('Payment Successful! (Simulation)\nOrder place ho gaya hai aur ' + location + ' bhej diya jayega.');
-            paymentOverlay.style.display = 'none';
         });
     </script>
 
