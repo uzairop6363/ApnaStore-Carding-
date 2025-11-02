@@ -14,6 +14,12 @@
             padding-bottom: 70px; 
         }
 
+        /* --- Link se underline hatane ke liye --- */
+        a {
+            text-decoration: none;
+            color: inherit; 
+        }
+
         /* --- Header & Search Bar --- */
         header {
             background-color: #ffffff;
@@ -63,6 +69,11 @@
             border-radius: 5px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:active {
+             transform: scale(0.98); /* Click par chota hoga */
         }
 
         .product-card img {
@@ -157,202 +168,234 @@
 
     <main class="product-grid">
 
-        <div class="product-card">
-            <img src="honda-70-2025.jpg" alt="Honda 70 2025">
-            <div class="product-info">
-                <h3 class="product-title">Honda CD 70 2025 Model (Latest)</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.63,200</span>
-                    <span class="original-price">Rs.157,900</span>
+        <a href="product.html?title=Honda%20CD%2070%202025%20Model%20(Latest)&price=Rs.63,200&oprice=Rs.157,900&rating=⭐%205.0%20(New)&img=honda-70-2025.jpg">
+            <div class="product-card">
+                <img src="honda-70-2025.jpg" alt="Honda 70 2025">
+                <div class="product-info">
+                    <h3 class="product-title">Honda CD 70 2025 Model (Latest)</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.63,200</span>
+                        <span class="original-price">Rs.157,900</span>
+                    </div>
+                    <p class="product-rating">⭐ 5.0 (New)</p>
                 </div>
-                <p class="product-rating">⭐ 5.0 (New)</p>
             </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-            <img src="honda-70-2024.jpg" alt="Honda 70 2024">
-            <div class="product-info">
-                <h3 class="product-title">Honda CD 70 2024 Model</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.61,200</span>
-                    <span class="original-price">Rs.152,900</span>
+        <a href="product.html?title=Honda%20CD%2070%202024%20Model&price=Rs.61,200&oprice=Rs.152,900&rating=⭐%204.9%20(120)&img=honda-70-2024.jpg">
+            <div class="product-card">
+                <img src="honda-70-2024.jpg" alt="Honda 70 2024">
+                <div class="product-info">
+                    <h3 class="product-title">Honda CD 70 2024 Model</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.61,200</span>
+                        <span class="original-price">Rs.152,900</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.9 (120)</p>
                 </div>
-                <p class="product-rating">⭐ 4.9 (120)</p>
             </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-            <img src="honda-70-2023.jpg" alt="Honda 70 2023">
-            <div class="product-info">
-                <h3 class="product-title">Honda CD 70 2023 Model</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.54,000</span>
-                    <span class="original-price">Rs.135,000</span>
+        <a href="product.html?title=Honda%20CD%2070%202023%20Model&price=Rs.54,000&oprice=Rs.135,000&rating=⭐%204.5%20(310)&img=honda-70-2023.jpg">
+            <div class="product-card">
+                <img src="honda-70-2023.jpg" alt="Honda 70 2023">
+                <div class="product-info">
+                    <h3 class="product-title">Honda CD 70 2023 Model</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.54,000</span>
+                        <span class="original-price">Rs.135,000</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.5 (310)</p>
                 </div>
-                <p class="product-rating">⭐ 4.5 (310)</p>
             </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-            <img src="honda-70-2022.jpg" alt="Honda 70 2022">
-            <div class="product-info">
-                <h3 class="product-title">Honda CD 70 2022 Model</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.48,000</span>
-                    <span class="original-price">Rs.120,000</span>
+        <a href="product.html?title=Honda%20CD%2070%202022%20Model&price=Rs.48,000&oprice=Rs.120,000&rating=⭐%204.3%20(450)&img=honda-70-2022.jpg">
+            <div class="product-card">
+                <img src="honda-70-2022.jpg" alt="Honda 70 2022">
+                <div class="product-info">
+                    <h3 class="product-title">Honda CD 70 2022 Model</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.48,000</span>
+                        <span class="original-price">Rs.120,000</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.3 (450)</p>
                 </div>
-                <p class="product-rating">⭐ 4.3 (450)</p>
             </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-            <img src="sp-70.jpg" alt="Super Power 70">
-            <div class="product-info">
-                <h3 class="product-title">Super Power SP 70 2024 Model</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.58,000</span>
-                    <span class="original-price">Rs.145,000</span>
+        <a href="product.html?title=Super%20Power%20SP%2070%202024%20Model&price=Rs.58,000&oprice=Rs.145,000&rating=⭐%204.6%20(215)&img=sp-70.jpg">
+            <div class="product-card">
+                <img src="sp-70.jpg" alt="Super Power 70">
+                <div class="product-info">
+                    <h3 class="product-title">Super Power SP 70 2024 Model</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.58,000</span>
+                        <span class="original-price">Rs.145,000</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.6 (215)</p>
                 </div>
-                <p class="product-rating">⭐ 4.6 (215)</p>
             </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-            <img src="unique-70.jpg" alt="Unique 70">
-            <div class="product-info">
-                <h3 class="product-title">Unique UD 70 2024 Model</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.56,000</span>
-                    <span class="original-price">Rs.140,000</span>
+        <a href="product.html?title=Unique%20UD%2070%202024%20Model&price=Rs.56,000&oprice=Rs.140,000&rating=⭐%204.5%20(190)&img=unique-70.jpg">
+            <div class="product-card">
+                <img src="unique-70.jpg" alt="Unique 70">
+                <div class="product-info">
+                    <h3 class="product-title">Unique UD 70 2024 Model</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.56,000</span>
+                        <span class="original-price">Rs.140,000</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.5 (190)</p>
                 </div>
-                <p class="product-rating">⭐ 4.5 (190)</p>
             </div>
-        </div>
+        </a>
         
-        <div class="product-card">
-            <img src="super-star-70.jpg" alt="Super Star 70">
-            <div class="product-info">
-                <h3 class="product-title">Super Star SS 70 2023 Model</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.54,000</span>
-                    <span class="original-price">Rs.135,000</span>
+        <a href="product.html?title=Super%20Star%20SS%2070%202023%20Model&price=Rs.54,000&oprice=Rs.135,000&rating=⭐%204.4%20(160)&img=super-star-70.jpg">
+            <div class="product-card">
+                <img src="super-star-70.jpg" alt="Super Star 70">
+                <div class="product-info">
+                    <h3 class="product-title">Super Star SS 70 2023 Model</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.54,000</span>
+                        <span class="original-price">Rs.135,000</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.4 (160)</p>
                 </div>
-                <p class="product-rating">⭐ 4.4 (160)</p>
             </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-            <img src="union-star-70.jpg" alt="Union Star 70">
-            <div class="product-info">
-                <h3 class="product-title">Union Star US 70 2024 Model</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.55,200</span>
-                    <span class="original-price">Rs.138,000</span>
+        <a href="product.html?title=Union%20Star%20US%2070%202024%20Model&price=Rs.55,200&oprice=Rs.138,000&rating=⭐%204.5%20(175)&img=union-star-70.jpg">
+            <div class="product-card">
+                <img src="union-star-70.jpg" alt="Union Star 70">
+                <div class="product-info">
+                    <h3 class="product-title">Union Star US 70 2024 Model</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.55,200</span>
+                        <span class="original-price">Rs.138,000</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.5 (175)</p>
                 </div>
-                <p class="product-rating">⭐ 4.5 (175)</p>
             </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-            <img src="infinix-hot-40.jpg" alt="Infinix Hot 40i">
-            <div class="product-info">
-                <h3 class="product-title">Infinix Hot 40i (8GB/256GB)</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.14,000</span>
-                    <span class="original-price">Rs.35,000</span>
+        <a href="product.html?title=Infinix%20Hot%2040i%20(8GB/256GB)&price=Rs.14,000&oprice=Rs.35,000&rating=⭐%204.6%20(510)&img=infinix-hot-40.jpg">
+            <div class="product-card">
+                <img src="infinix-hot-40.jpg" alt="Infinix Hot 40i">
+                <div class="product-info">
+                    <h3 class="product-title">Infinix Hot 40i (8GB/256GB)</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.14,000</span>
+                        <span class="original-price">Rs.35,000</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.6 (510)</p>
                 </div>
-                <p class="product-rating">⭐ 4.6 (510)</p>
             </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-            <img src="sparx-neo-7.jpg" alt="Sparx Neo 7">
-            <div class="product-info">
-                <h3 class="product-title">Sparx Neo 7 Plus (4GB/64GB)</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.9,200</span>
-                    <span class="original-price">Rs.23,000</span>
+        <a href="product.html?title=Sparx%20Neo%207%20Plus%20(4GB/64GB)&price=Rs.9,200&oprice=Rs.23,000&rating=⭐%204.2%20(320)&img=sparx-neo-7.jpg">
+            <div class="product-card">
+                <img src="sparx-neo-7.jpg" alt="Sparx Neo 7">
+                <div class="product-info">
+                    <h3 class="product-title">Sparx Neo 7 Plus (4GB/64GB)</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.9,200</span>
+                        <span class="original-price">Rs.23,000</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.2 (320)</p>
                 </div>
-                <p class="product-rating">⭐ 4.2 (320)</p>
             </div>
-        </div>
+        </a>
         
-        <div class="product-card">
-            <img src="iphone-12-pro.jpg" alt="iPhone 12 Pro Max">
-            <div class="product-info">
-                <h3 class="product-title">iPhone 12 Pro Max (256GB) PTA Approved</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.96,400</span>
-                    <span class="original-price">Rs.240,999</span>
+        <a href="product.html?title=iPhone%2012%20Pro%20Max%20(256GB)%20PTA%20Approved&price=Rs.96,400&oprice=Rs.240,999&rating=⭐%204.9%20(1,150)&img=iphone-12-pro.jpg">
+            <div class="product-card">
+                <img src="iphone-12-pro.jpg" alt="iPhone 12 Pro Max">
+                <div class="product-info">
+                    <h3 class="product-title">iPhone 12 Pro Max (256GB) PTA Approved</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.96,400</span>
+                        <span class="original-price">Rs.240,999</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.9 (1,150)</p>
                 </div>
-                <p class="product-rating">⭐ 4.9 (1,150)</p>
             </div>
-        </div>
+        </a>
         
-        <div class="product-card">
-            <img src="iphone-x.jpg" alt="iPhone X">
-            <div class="product-info">
-                <h3 class="product-title">iPhone X (64GB) PTA Approved</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.58,000</span>
-                    <span class="original-price">Rs.144,999</span>
+        <a href="product.html?title=iPhone%20X%20(64GB)%20PTA%20Approved&price=Rs.58,000&oprice=Rs.144,999&rating=⭐%204.7%20(980)&img=iphone-x.jpg">
+            <div class="product-card">
+                <img src="iphone-x.jpg" alt="iPhone X">
+                <div class="product-info">
+                    <h3 class="product-title">iPhone X (64GB) PTA Approved</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.58,000</span>
+                        <span class="original-price">Rs.144,999</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.7 (980)</p>
                 </div>
-                <p class="product-rating">⭐ 4.7 (980)</p>
             </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-            <img src="camon-19.jpg" alt="Camon 19 Neo">
-            <div class="product-info">
-                <h3 class="product-title">Tecno Camon 19 Neo (128GB)</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.16,400</span>
-                    <span class="original-price">Rs.40,999</span>
+        <a href="product.html?title=Tecno%20Camon%2019%20Neo%20(128GB)&price=Rs.16,400&oprice=Rs.40,999&rating=⭐%204.5%20(610)&img=camon-19.jpg">
+            <div class="product-card">
+                <img src="camon-19.jpg" alt="Camon 19 Neo">
+                <div class="product-info">
+                    <h3 class="product-title">Tecno Camon 19 Neo (128GB)</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.16,400</span>
+                        <span class="original-price">Rs.40,999</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.5 (610)</p>
                 </div>
-                <p class="product-rating">⭐ 4.5 (610)</p>
             </div>
-        </div>
+        </a>
 
-        <div class="product-card">
-            <img src="smart-watch.jpg" alt="Smart Watch">
-            <div class="product-info">
-                <h3 class="product-title">Mark Pro Smartwatch (Series 8)</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.6,800</span>
-                    <span class="original-price">Rs.16,999</span>
+        <a href="product.html?title=Mark%20Pro%20Smartwatch%20(Series%208)&price=Rs.6,800&oprice=Rs.16,999&rating=⭐%204.6%20(1,820)&img=smart-watch.jpg">
+            <div class="product-card">
+                <img src="smart-watch.jpg" alt="Smart Watch">
+                <div class="product-info">
+                    <h3 class="product-title">Mark Pro Smartwatch (Series 8)</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.6,800</span>
+                        <span class="original-price">Rs.16,999</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.6 (1,820)</p>
                 </div>
-                <p class="product-rating">⭐ 4.6 (1,820)</p>
             </div>
-        </div>
+        </a>
         
-        <div class="product-card">
-            <img src="laptop-bag.jpg" alt="Laptop Bag">
-            <div class="product-info">
-                <h3 class="product-title">Premium Laptop Bag (Waterproof) 15.6 Inch</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.3,160</span>
-                    <span class="original-price">Rs.7,900</span>
+        <a href="product.html?title=Premium%20Laptop%20Bag%20(Waterproof)%2015.6%20Inch&price=Rs.3,160&oprice=Rs.7,900&rating=⭐%204.8%20(750)&img=laptop-bag.jpg">
+            <div class="product-card">
+                <img src="laptop-bag.jpg" alt="Laptop Bag">
+                <div class="product-info">
+                    <h3 class="product-title">Premium Laptop Bag (Waterproof) 15.6 Inch</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.3,160</span>
+                        <span class="original-price">Rs.7,900</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.8 (750)</p>
                 </div>
-                <p class="product-rating">⭐ 4.8 (750)</p>
             </div>
-        </div>
+        </a>
         
-        <div class="product-card">
-            <img src="s23-ultra.jpg" alt="S23 Ultra">
-            <div class="product-info">
-                <h3 class="product-title">Samsung S23 Ultra 5G (12GB/256GB)</h3>
-                <div class="price-container">
-                    <span class="product-price">Rs.55,200</span>
-                    <span class="original-price">Rs.213,000</span>
+        <a href="product.html?title=Samsung%20S23%20Ultra%205G%20(12GB/256GB)&price=Rs.55,200&oprice=Rs.213,000&rating=⭐%204.9%20(920)&img=s23-ultra.jpg">
+            <div class="product-card">
+                <img src="s23-ultra.jpg" alt="S23 Ultra">
+                <div class="product-info">
+                    <h3 class="product-title">Samsung S23 Ultra 5G (12GB/256GB)</h3>
+                    <div class="price-container">
+                        <span class="product-price">Rs.55,200</span>
+                        <span class="original-price">Rs.213,000</span>
+                    </div>
+                    <p class="product-rating">⭐ 4.9 (920)</p>
                 </div>
-                <p class="product-rating">⭐ 4.9 (920)</p>
             </div>
-        </div>
+        </a>
         
-        </main>
+    </main>
 
     <nav class="bottom-nav">
-        <a href="#" class="bottom-nav-item">
+        <a href="index.html" class="bottom-nav-item">
             <span>🏠</span>
             Home
         </a>
