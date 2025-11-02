@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApnaStore</title>
+    <style>
+        /* --- Basic Setup --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            padding-bottom: 70px; 
+        }
+
+        /* --- Header & Search Bar --- */
+        header {
+            background-color: #ffffff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .search-container {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .search-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #f0f0f0;
+            border-radius: 5px 0 0 5px;
+            background-color: #f5f5f5;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #f57224; /* Orange Color */
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* --- Product Grid --- */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 columns */
+            gap: 8px;
+            padding: 8px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1; /* Square images */
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .product-info {
+            padding: 10px;
+        }
+
+        .product-title {
+            font-size: 14px;
+            color: #333;
+            margin: 0 0 5px 0;
+            height: 40px; /* 2 lines ke liye jagah */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+        /* --- Price Styles --- */
+        .price-container {
+            display: flex;
+            flex-wrap: wrap; 
+            align-items: baseline; 
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #f57224; /* Orange Price */
+            margin-right: 8px;
+        }
+        
+        .original-price {
+            font-size: 12px;
+            color: #9e9e9e; /* Grey color */
+            text-decoration: line-through; /* Strikethrough */
+        }
+        
+        .product-rating {
+            font-size: 12px;
+            color: #757575;
+            margin-top: 5px;
+        }
+
+        /* --- Bottom Navigation Bar --- */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            background-color: #ffffff;
+            padding: 10px 0;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        .bottom-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .bottom-nav-item span {
+            font-size: 20px; /* Icon size (using emoji) */
+            margin-bottom: 2px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="search-container">
+            <input type="text" placeholder="ApnaStore par search karein...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <main class="product-grid">
+
+        <div class="product-card">
+            <img src="honda-70-2025.jpg" alt="Honda 70 2025">
+            <div class="product-info">
+                <h3 class="product-title">Honda CD 70 2025 Model (New)</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.63,200</span>
+                    <span class="original-price">Rs.157,900</span>
+                </div>
+                <p class="product-rating">⭐ 5.0 (New)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="honda-70-2024.jpg" alt="Honda 70 2024">
+            <div class="product-info">
+                <h3 class="product-title">Honda CD 70 2024 Model</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.61,200</span>
+                    <span class="original-price">Rs.152,900</span>
+                </div>
+                <p class="product-rating">⭐ 4.9 (120)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="honda-70-2023.jpg" alt="Honda 70 2023">
+            <div class="product-info">
+                <h3 class="product-title">Honda CD 70 2023 Model (Used)</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.54,000</span>
+                    <span class="original-price">Rs.135,000</span>
+                </div>
+                <p class="product-rating">⭐ 4.5 (310)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="honda-70-2022.jpg" alt="Honda 70 2022">
+            <div class="product-info">
+                <h3 class="product-title">Honda CD 70 2022 Model (Used)</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.48,000</span>
+                    <span class="original-price">Rs.120,000</span>
+                </div>
+                <p class="product-rating">⭐ 4.3 (450)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="sp-70.jpg" alt="Super Power 70">
+            <div class="product-info">
+                <h3 class="product-title">Super Power SP 70 2024 Model</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.58,000</span>
+                    <span class="original-price">Rs.145,000</span>
+                </div>
+                <p class="product-rating">⭐ 4.6 (215)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="unique-70.jpg" alt="Unique 70">
+            <div class="product-info">
+                <h3 class="product-title">Unique UD 70 2024 Model</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.56,000</span>
+                    <span class="original-price">Rs.140,000</span>
+                </div>
+                <p class="product-rating">⭐ 4.5 (190)</p>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="super-star-70.jpg" alt="Super Star 70">
+            <div class="product-info">
+                <h3 class="product-title">Super Star SS 70 2023 Model</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.54,000</span>
+                    <span class="original-price">Rs.135,000</span>
+                </div>
+                <p class="product-rating">⭐ 4.4 (160)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="union-star-70.jpg" alt="Union Star 70">
+            <div class="product-info">
+                <h3 class="product-title">Union Star US 70 2024 Model</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.55,200</span>
+                    <span class="original-price">Rs.138,000</span>
+                </div>
+                <p class="product-rating">⭐ 4.5 (175)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="infinix-hot-40.jpg" alt="Infinix Hot 40i">
+            <div class="product-info">
+                <h3 class="product-title">Infinix Hot 40i (8GB/256GB)</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.14,000</span>
+                    <span class="original-price">Rs.35,000</span>
+                </div>
+                <p class="product-rating">⭐ 4.6 (510)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="sparx-neo-7.jpg" alt="Sparx Neo 7">
+            <div class="product-info">
+                <h3 class="product-title">Sparx Neo 7 Plus (4GB/64GB)</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.9,200</span>
+                    <span class="original-price">Rs.23,000</span>
+                </div>
+                <p class="product-rating">⭐ 4.2 (320)</p>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="iphone-12-pro.jpg" alt="iPhone 12 Pro Max">
+            <div class="product-info">
+                <h3 class="product-title">iPhone 12 Pro Max (256GB) PTA Approved</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.96,400</span>
+                    <span class="original-price">Rs.240,999</span>
+                </div>
+                <p class="product-rating">⭐ 4.9 (1,150)</p>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="iphone-x.jpg" alt="iPhone X">
+            <div class="product-info">
+                <h3 class="product-title">iPhone X (64GB) PTA Approved</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.58,000</span>
+                    <span class="original-price">Rs.144,999</span>
+                </div>
+                <p class="product-rating">⭐ 4.7 (980)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="camon-19.jpg" alt="Camon 19 Neo">
+            <div class="product-info">
+                <h3 class="product-title">Tecno Camon 19 Neo (128GB)</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.16,400</span>
+                    <span class="original-price">Rs.40,999</span>
+                </div>
+                <p class="product-rating">⭐ 4.5 (610)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="smart-watch.jpg" alt="Smart Watch">
+            <div class="product-info">
+                <h3 class="product-title">Mark Pro Smartwatch (Series 8)</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.6,800</span>
+                    <span class="original-price">Rs.16,999</span>
+                </div>
+                <p class="product-rating">⭐ 4.6 (1,820)</p>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="laptop-bag.jpg" alt="Laptop Bag">
+            <div class="product-info">
+                <h3 class="product-title">Premium Laptop Bag (Waterproof) 15.6 Inch</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.3,160</span>
+                    <span class="original-price">Rs.7,900</span>
+                </div>
+                <p class="product-rating">⭐ 4.8 (750)</p>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="s23-ultra.jpg" alt="S23 Ultra">
+            <div class="product-info">
+                <h3 class="product-title">Samsung S23 Ultra 5G (12GB/256GB)</h3>
+                <div class="price-container">
+                    <span class="product-price">Rs.85,200</span>
+                    <span class="original-price">Rs.213,000</span>
+                </div>
+                <p class="product-rating">⭐ 4.9 (920)</p>
+            </div>
+        </div>
+        
+        </main>
+
+    <nav class="bottom-nav">
+        <a href="#" class="bottom-nav-item">
+            <span>🏠</span>
+            Home
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <span>📑</span>
+            Categories
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <span>🛒</span>
+            Cart
+        </a>
+        <a href="#" class="bottom-nav-item">
+            <span>👤</span>
+            Account
+        </a>
+    </nav>
+
+</body>
+</html>
